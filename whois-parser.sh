@@ -18,7 +18,6 @@ for zn in `cat zone.list`; do
 done
 
 echo ");" >> whois.iana.db.php
-echo "?>" >> whois.iana.db.php
 
 # Yaiks
 rm -f zone.tmp
