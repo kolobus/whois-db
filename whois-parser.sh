@@ -13,7 +13,7 @@ echo "\$ianawhois = Array (" >> whois.iana.db.php
 for zn in `cat zone.list`; do
 	whois -h whois.iana.org $zn > zone.tmp
 	echo "	\"$zn\" => \"`cat zone.tmp | grep "whois:\s" | awk '{print $2}'`\"," >> whois.iana.db.php
-	sleep 5
+	sleep 1
 	# Keep it above 3 seconds to avoid permanent ban
 done
 
